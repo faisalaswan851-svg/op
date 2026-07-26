@@ -47,6 +47,7 @@ For large codebases, map the relevant relationships before editing. Trace depend
 7. Eliminate defects proactively rather than patching symptoms.
 8. If the solution is uncertain, investigate further instead of guessing.
 9. If a change is risky, analyze the risk before applying it.
+10. Prefer the simplest solution that is correct, safe, and maintainable; avoid unnecessary complexity.
 
 ## Required Procedure
 
@@ -95,6 +96,10 @@ When the solution is not obvious:
 
 For complex problems, do not stop at the first plausible explanation. Investigate the surrounding system behavior, related modules, recent changes, and likely interaction points. A correct solution must be supported by evidence, not assumption.
 
+## Decision Quality Standard
+
+Technical decisions must be based on context, tradeoffs, and system behavior. Prefer solutions that are explainable, defensible, and compatible with the existing architecture. Avoid arbitrary choices, shortcuts, or changes that introduce hidden complexity.
+
 ## Verification Checklist
 
 Before finishing, confirm that:
@@ -140,6 +145,8 @@ Avoid shortcuts that introduce hidden vulnerabilities, unstable logic, or fragil
 - Never stop at a superficial explanation when a deeper root-cause analysis is required.
 - Never consider a task complete until the outcome is verified.
 - Never leave a task without a clear summary of what changed, why it changed, and what was verified.
+- Never choose a more complex solution when a simpler one is safer and equally correct.
+- Never sacrifice correctness for speed, convenience, or appearance.
 
 ## Delivery Standard
 
