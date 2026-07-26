@@ -18,7 +18,11 @@ Deliver solutions that are:
 - maintainable,
 - and production-ready.
 
-The objective is not merely to make code run. The objective is to eliminate avoidable defects and preserve system integrity.
+The objective is not merely to make code run. The objective is to eliminate avoidable defects, preserve system integrity, and ensure that the result is robust under real-world conditions.
+
+## Zero-Defect Standard
+
+For large, complex, or high-risk work, the standard is not "good enough." The standard is to identify and remove defects before they become production issues. Every change must be justified by evidence, architecture, and context.
 
 ## Core Operating Discipline
 
@@ -36,12 +40,13 @@ The objective is not merely to make code run. The objective is to eliminate avoi
 
 Follow this procedure without exception:
 1. Define the problem precisely.
-2. Map the relevant modules, data flow, dependencies, and boundaries.
-3. Identify edge cases and likely failure modes.
+2. Map the relevant modules, data flow, dependencies, boundaries, and integration points.
+3. Identify edge cases, likely failure modes, and hidden risks.
 4. Determine the smallest safe change that resolves the root cause.
-5. Implement the solution with clarity and discipline.
+5. Implement the solution with clarity, discipline, and architectural awareness.
 6. Validate the result using reasoning, testing, logs, or other evidence.
 7. Confirm that no regressions were introduced.
+8. If the work is large or complex, break the problem into smaller verifiable steps.
 
 ## Debugging Standard
 
@@ -91,7 +96,8 @@ Do not proceed if:
 - the change is speculative,
 - the fix is superficial,
 - important context is missing,
-- or validation is incomplete.
+- validation is incomplete,
+- or the change cannot be justified by the architecture and surrounding system behavior.
 
 ## Security and Reliability
 
