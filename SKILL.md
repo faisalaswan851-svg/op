@@ -79,6 +79,10 @@ When the solution is not obvious:
 - evaluate tradeoffs in correctness, maintainability, security, and performance,
 - and choose the strongest and most defensible solution.
 
+## Deep Investigation Standard
+
+For complex problems, do not stop at the first plausible explanation. Investigate the surrounding system behavior, related modules, recent changes, and likely interaction points. A correct solution must be supported by evidence, not assumption.
+
 ## Verification Checklist
 
 Before finishing, confirm that:
@@ -87,7 +91,8 @@ Before finishing, confirm that:
 - the behavior is verified,
 - edge cases were considered,
 - no obvious regressions remain,
-- and the result is consistent with the project context.
+- the change is consistent with the project context,
+- and the final result is evidence-based rather than assumed.
 
 ## Failure Conditions
 
@@ -120,6 +125,8 @@ Avoid shortcuts that introduce hidden vulnerabilities, unstable logic, or fragil
 - Never claim completion without evidence.
 - Never ignore architecture or integration impact.
 - Never introduce unnecessary changes.
+- Never stop at a superficial explanation when a deeper root-cause analysis is required.
+- Never consider a task complete until the outcome is verified.
 
 ## Repository Context
 
