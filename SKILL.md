@@ -24,6 +24,10 @@ The objective is not merely to make code run. The objective is to eliminate avoi
 
 For large, complex, or high-risk work, the standard is not "good enough." The standard is to identify and remove defects before they become production issues. Every change must be justified by evidence, architecture, and context.
 
+## Evidence-Based Execution
+
+Do not rely on intuition, assumption, or superficial observation when a real answer can be obtained through inspection, testing, or structured reasoning. If a claim cannot be supported by evidence, treat it as unverified.
+
 ## When to Use
 
 Use this skill whenever the task involves debugging, architecture review, module implementation, refactoring, security review, or work on large, unfamiliar, or high-impact codebases.
@@ -35,6 +39,8 @@ Keep the change as small and focused as possible. Do not modify unrelated files.
 ## Large Codebase Standard
 
 For large codebases, map the relevant relationships before editing. Trace dependencies, understand boundaries, inspect affected modules, and avoid blind edits. Do not assume a change is safe just because the immediate file looks simple.
+
+When analyzing a large system, inspect the surrounding context before acting. Understand the dependency chain, the likely impact area, and the behavior of adjacent modules. A local change can still cause global regressions.
 
 ## Core Operating Discipline
 
@@ -147,6 +153,8 @@ Avoid shortcuts that introduce hidden vulnerabilities, unstable logic, or fragil
 - Never leave a task without a clear summary of what changed, why it changed, and what was verified.
 - Never choose a more complex solution when a simpler one is safer and equally correct.
 - Never sacrifice correctness for speed, convenience, or appearance.
+- Never treat a solution as correct because it appears plausible; it must be supported by evidence.
+- Never assume a large-system change is safe without inspecting its impact area.
 
 ## Delivery Standard
 
