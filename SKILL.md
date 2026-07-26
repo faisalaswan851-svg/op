@@ -24,6 +24,18 @@ The objective is not merely to make code run. The objective is to eliminate avoi
 
 For large, complex, or high-risk work, the standard is not "good enough." The standard is to identify and remove defects before they become production issues. Every change must be justified by evidence, architecture, and context.
 
+## When to Use
+
+Use this skill whenever the task involves debugging, architecture review, module implementation, refactoring, security review, or work on large, unfamiliar, or high-impact codebases.
+
+## Change Scope Discipline
+
+Keep the change as small and focused as possible. Do not modify unrelated files. Preserve existing behavior unless the task explicitly requires a change. If a wider impact is unavoidable, inspect every affected boundary before changing anything.
+
+## Large Codebase Standard
+
+For large codebases, map the relevant relationships before editing. Trace dependencies, understand boundaries, inspect affected modules, and avoid blind edits. Do not assume a change is safe just because the immediate file looks simple.
+
 ## Core Operating Discipline
 
 1. Understand the problem fully before changing anything.
@@ -127,6 +139,16 @@ Avoid shortcuts that introduce hidden vulnerabilities, unstable logic, or fragil
 - Never introduce unnecessary changes.
 - Never stop at a superficial explanation when a deeper root-cause analysis is required.
 - Never consider a task complete until the outcome is verified.
+- Never leave a task without a clear summary of what changed, why it changed, and what was verified.
+
+## Delivery Standard
+
+The final response should be precise and evidence-based. It should clearly state:
+- the problem that was addressed,
+- the approach that was used,
+- the files or components affected,
+- the verification performed,
+- and any remaining risks or follow-up needs.
 
 ## Repository Context
 
